@@ -102,10 +102,20 @@ namespace DoubleButton.Controls
 
 
                 Dg_ItemsControl.ItemsSource = DataGridBoxes;
+                //var ax = Dg_ItemsControl.ItemTemplate;
+                //DataGrid a = (DataGrid)Dg_ItemsControl.ItemTemplate;
+                //a.Sorting += DataGrid_Sorting;
+
             }
 
 
         }
+
+        private void DataGrid_Sorting(object sender, DataGridSortingEventArgs e)
+        {
+            Debug.WriteLine($"Ok, Sort start !2");
+        }
+
         private static void OnDisplayChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             ((MultiDataGrid)d).OnDisplayChanged(d);
@@ -114,7 +124,7 @@ namespace DoubleButton.Controls
         
         #endregion
         #region PrivateClass
-        public void Sorting()
+        public void MySorting()
         {
             Debug.WriteLine($"Ok, Sort start !");
         }

@@ -21,8 +21,9 @@ xmlns:cal="http://www.caliburnproject.org">
                                 <DataGrid 
                                     AutoGenerateColumns="False"
                                     ItemsSource="{Binding ItemsSource, Mode=TwoWay}" 
-                                    cal:Message.Attach="[Event Sorting] = [Action Sorting()]"
+                                    cal:Message.Attach="[Event Sorting] = [Action MySorting()]"
                                     Margin="0 0 10 0"
+                                    cal:Action.TargetWithoutContext="{Binding DataContext, ElementName=Dg_ItemsControl}"
                                     >
                                     <!-- 
                                     
